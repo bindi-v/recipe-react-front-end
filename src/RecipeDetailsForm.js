@@ -44,7 +44,7 @@ function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
             setShowRatingForm(false);
             return;
         }
-
+ // eslint-disable-next-line default-case
         switch (action) {
             case "add-ingredient":
                 setIngredients([...ingredients, ingredient]);
@@ -64,7 +64,7 @@ function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
             case "delete-ingredient":
                 setIngredients(ingredients.filter(e => e.ingredientId !== ingredient.ingredientId));
                 break;
-            case "add-prepstep":
+            case "add-prepared":
                 setPrepSteps([...prepSteps, prepStep]);
                 break;
             case "edit-prepstep":
