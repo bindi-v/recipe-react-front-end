@@ -2,8 +2,8 @@ function RecipeCard({ recipe, notify }) {
 
     function handleDelete() {
         fetch(`http://localhost:8080/recipes/${recipe.recipeId}`, { method: "DELETE" })
-            .then(() => notify({ action: "delete-recipe", recipe: recipe }))
-            .catch(error => notify({ action: "delete-recipe", error: error }));
+            .then(() => notify({ action: "delete", recipe: recipe }))
+            .catch(error => notify({ action: "delete", error: error }));
     }
 
     return (
