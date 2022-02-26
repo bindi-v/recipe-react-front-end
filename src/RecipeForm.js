@@ -14,7 +14,7 @@ function RecipeForm({ recipe: initialRecipe, notify }) {
     function handleSubmit(evt) {
         evt.preventDefault();
 
-        const url = `http://localhost:8080/recipes`;
+        const url = `https://recipe-service-java-back-end.herokuapp.com/recipes`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = isAdd ? 201 : 200;
 

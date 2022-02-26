@@ -1,7 +1,7 @@
 function PrepStepCard({ prepStep, subNotify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/prepsteps/${prepStep.prepStepId}`, { method: "DELETE" })
+        fetch(`https://recipe-service-java-back-end.herokuapp.com/prepsteps/${prepStep.prepStepId}`, { method: "DELETE" })
             .then(() => subNotify({ action: "delete-prepstep", prepStep: prepStep }))
             .catch(error => subNotify({ action: "delete-prepstep", error: error }));
     }

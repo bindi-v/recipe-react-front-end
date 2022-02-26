@@ -14,7 +14,7 @@ function IngredientForm({ ingredient: initialIngredient, subNotify }) {
     function handleSubmit(evt) {
         evt.preventDefault();
 
-        const url = `http://localhost:8080/ingredients`;
+        const url = `https://recipe-service-java-back-end.herokuapp.com/ingredients`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = isAdd ? 201 : 200;
 

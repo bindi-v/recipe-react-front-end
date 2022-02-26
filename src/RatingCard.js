@@ -1,7 +1,7 @@
 function RatingCard({ rating, subNotify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/ratings/${rating.ratingId}`, { method: "DELETE" })
+        fetch(`https://recipe-service-java-back-end.herokuapp.com/ratings/${rating.ratingId}`, { method: "DELETE" })
             .then(() => subNotify({ action: "delete-rating", rating: rating }))
             .catch(error => subNotify({ action: "delete-rating", error: error }));
     }

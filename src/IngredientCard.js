@@ -1,7 +1,7 @@
 function IngredientCard({ ingredient, subNotify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/ingredients/${ingredient.ingredientId}`, { method: "DELETE" })
+        fetch(`https://recipe-service-java-back-end.herokuapp.com/ingredients/${ingredient.ingredientId}`, { method: "DELETE" })
             .then(() => subNotify({ action: "delete-ingredient", ingredient: ingredient }))
             .catch(error => subNotify({ action: "delete-ingredient", error: error }));
     }

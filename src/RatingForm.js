@@ -22,7 +22,7 @@ function RatingForm({ rating: initialRating, subNotify }) {
     function handleSubmit(evt) {
         evt.preventDefault();
 
-        const url = `http://localhost:8080/ratings`;
+        const url = `https://recipe-service-java-back-end.herokuapp.com/ratings`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = 200;
 

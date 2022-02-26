@@ -14,7 +14,7 @@ function PrepStepForm({ prepStep: initialPrepStep, subNotify }) {
     function handleSubmit(evt) {
         evt.preventDefault();
 
-        const url = `http://localhost:8080/prepsteps`;
+        const url = `https://recipe-service-java-back-end.herokuapp.com/prepsteps`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = 200;
 
